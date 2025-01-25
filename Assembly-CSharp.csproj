@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{95C7C293-E4AB-4A60-32B0-F8F42F71409E}</ProjectGuid>
+    <ProjectGuid>{C8F94516-571E-4A6C-20A0-0FD152D4ED47}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -61,6 +61,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\script\SceneTransition.cs" />
+    <Compile Include="Assets\script\EnvironmentMover.cs" />
+    <Compile Include="Assets\script\MicrophoneManager.cs" />
+    <Compile Include="Assets\script\FireController.cs" />
+    <Compile Include="Assets\script\RabbitController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
