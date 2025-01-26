@@ -197,7 +197,6 @@
             "fullManagedTypeName": "UnityEngine.AudioBehaviour",
             "moduleName": "Audio",
             "usedInScenes": [
-                "Assets/Scenes/ARScene.unity",
                 "Assets/Scenes/MainMenuScene.unity",
                 "Assets/Scenes/Museum.unity",
                 "Assets/Scenes/Settlement.unity"
@@ -209,7 +208,6 @@
             "fullManagedTypeName": "UnityEngine.AudioListener",
             "moduleName": "Audio",
             "usedInScenes": [
-                "Assets/Scenes/ARScene.unity",
                 "Assets/Scenes/MainMenuScene.unity",
                 "Assets/Scenes/Museum.unity",
                 "Assets/Scenes/Settlement.unity"
@@ -233,7 +231,8 @@
             "fullManagedTypeName": "UnityEngine.BoxCollider",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/ARScene.unity"
+                "Assets/Scenes/ARScene.unity",
+                "Assets/Scenes/MainMenuScene.unity"
             ]
         },
         {
@@ -284,7 +283,8 @@
             "fullManagedTypeName": "UnityEngine.Collider",
             "moduleName": "Physics",
             "usedInScenes": [
-                "Assets/Scenes/ARScene.unity"
+                "Assets/Scenes/ARScene.unity",
+                "Assets/Scenes/MainMenuScene.unity"
             ]
         },
         {
@@ -376,6 +376,15 @@
             "usedInScenes": [
                 "Assets/Scenes/ARScene.unity",
                 "Assets/Scenes/MainMenuScene.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "MeshCollider",
+            "fullManagedTypeName": "UnityEngine.MeshCollider",
+            "moduleName": "Physics",
+            "usedInScenes": [
+                "Assets/Scenes/ARScene.unity"
             ]
         },
         {

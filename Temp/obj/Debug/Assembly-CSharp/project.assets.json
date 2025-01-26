@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mjr/Documents/GitHub/Bunny/Assembly-CSharp.csproj",
+      "projectUniqueName": "/Users/mjr/Documents/GitHub/Bunny copy 3/Assembly-CSharp.csproj",
       "projectName": "Assembly-CSharp",
-      "projectPath": "/Users/mjr/Documents/GitHub/Bunny/Assembly-CSharp.csproj",
+      "projectPath": "/Users/mjr/Documents/GitHub/Bunny copy 3/Assembly-CSharp.csproj",
       "packagesPath": "/Users/mjr/.nuget/packages/",
-      "outputPath": "/Users/mjr/Documents/GitHub/Bunny/Temp/obj/Debug/Assembly-CSharp/",
+      "outputPath": "/Users/mjr/Documents/GitHub/Bunny copy 3/Temp/obj/Debug/Assembly-CSharp/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/mjr/.nuget/NuGet/NuGet.Config"

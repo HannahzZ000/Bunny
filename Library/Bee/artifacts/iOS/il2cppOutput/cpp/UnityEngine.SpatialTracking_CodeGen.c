@@ -12,8 +12,12 @@
 
 
 
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mCE359C5A5A58D8621F30428690D32D7A877B0256 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m65BD3D2B2847C50307ED758599CA8462DAEDBB0D (void);
+extern void TrackedPoseDriverDataDescription__ctor_m76D45B5826854354DF5D5F3962767B0ED49FD5E7 (void);
 extern void TrackedPoseDriverDataDescription__cctor_mB66097427DE427D6DAC5B5A68CC2D35E7526BE27 (void);
 extern void PoseDataSource_GetNodePoseData_m07EE5781C7E0EB625084A340D115C34C47B07B8E (void);
+extern void PoseDataSource_TryGetDataFromSource_m9CCF52B621C860AB223A2F1B621C99E0106455F1 (void);
 extern void PoseDataSource_GetDataFromSource_mD37A9CC706B99D7A2535DEA7CB0D40F7F47B277A (void);
 extern void PoseDataSource__cctor_m2CA606CD693A292EED74511BED8CEC06870BA3F3 (void);
 extern void TrackedPoseDriver_get_deviceType_m17B7178484ECE7F92482DE4C601BBBD70246B743 (void);
@@ -49,10 +53,14 @@ extern void TrackedPoseDriver__ctor_mCB5636C22D685907A7D30BEA4FF3D5BD2FE5D3F0 (v
 extern void BasePoseProvider_GetPoseFromProvider_m815E60EB1A0C2D449B60F60DDD0D49DCF7E68A69 (void);
 extern void BasePoseProvider_TryGetPoseFromProvider_m6961C33D08BB411C9E425EDE5813480319F9BFB0 (void);
 extern void BasePoseProvider__ctor_mB1BA00DFB674FA54CD28933D4335F6162B378020 (void);
-static Il2CppMethodPointer s_methodPointers[37] = 
+static Il2CppMethodPointer s_methodPointers[41] = 
 {
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mCE359C5A5A58D8621F30428690D32D7A877B0256,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m65BD3D2B2847C50307ED758599CA8462DAEDBB0D,
+	TrackedPoseDriverDataDescription__ctor_m76D45B5826854354DF5D5F3962767B0ED49FD5E7,
 	TrackedPoseDriverDataDescription__cctor_mB66097427DE427D6DAC5B5A68CC2D35E7526BE27,
 	PoseDataSource_GetNodePoseData_m07EE5781C7E0EB625084A340D115C34C47B07B8E,
+	PoseDataSource_TryGetDataFromSource_m9CCF52B621C860AB223A2F1B621C99E0106455F1,
 	PoseDataSource_GetDataFromSource_mD37A9CC706B99D7A2535DEA7CB0D40F7F47B277A,
 	PoseDataSource__cctor_m2CA606CD693A292EED74511BED8CEC06870BA3F3,
 	TrackedPoseDriver_get_deviceType_m17B7178484ECE7F92482DE4C601BBBD70246B743,
@@ -89,51 +97,55 @@ static Il2CppMethodPointer s_methodPointers[37] =
 	BasePoseProvider_TryGetPoseFromProvider_m6961C33D08BB411C9E425EDE5813480319F9BFB0,
 	BasePoseProvider__ctor_mB1BA00DFB674FA54CD28933D4335F6162B378020,
 };
-static const int32_t s_InvokerIndices[37] = 
+static const int32_t s_InvokerIndices[41] = 
 {
-	10241,
-	8909,
-	8909,
-	10241,
-	6748,
-	5374,
-	6748,
-	5374,
-	1606,
-	6793,
-	5417,
-	1154,
-	6748,
-	5374,
-	6748,
-	5374,
-	6673,
-	5296,
-	6804,
-	5428,
-	6907,
-	6907,
-	6907,
-	6907,
-	6907,
-	6907,
-	6907,
-	6907,
-	6907,
-	1464,
-	4771,
-	6673,
-	6907,
-	6907,
-	4350,
-	3597,
-	6907,
+	10354,
+	6948,
+	6948,
+	10328,
+	8982,
+	8805,
+	8982,
+	10328,
+	6789,
+	5410,
+	6789,
+	5410,
+	1629,
+	6834,
+	5453,
+	1164,
+	6789,
+	5410,
+	6789,
+	5410,
+	6714,
+	5332,
+	6845,
+	5464,
+	6948,
+	6948,
+	6948,
+	6948,
+	6948,
+	6948,
+	6948,
+	6948,
+	6948,
+	1479,
+	4806,
+	6714,
+	6948,
+	6948,
+	4385,
+	3629,
+	6948,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_SpatialTracking_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_SpatialTracking_CodeGenModule = 
 {
 	"UnityEngine.SpatialTracking.dll",
-	37,
+	41,
 	s_methodPointers,
 	0,
 	NULL,

@@ -3,7 +3,7 @@
     {
       "type": "il2cppData",
       "msg": {
-        "build_event_id": "df3ada7450b0c43349ac0f33fe5fa379",
+        "build_event_id": "9a4317d6536ce43c797d8c0ee358645a",
         "node_executed": false,
         "attribute_total_count_eager_static_constructor": 9,
         "attribute_total_count_set_option": 0,
@@ -42,12 +42,13 @@
     {
       "type": "playerBuildTimingData",
       "msg": {
-        "build_event_id": "df3ada7450b0c43349ac0f33fe5fa379",
-        "build_player": 9599,
-        "preprocess_player": 3373,
-        "produce_player_script_assemblies": 663,
-        "build_scripts_dlls": 8,
-        "postprocess_built_player": 5133,
+        "build_event_id": "9a4317d6536ce43c797d8c0ee358645a",
+        "build_player": 10271,
+        "preprocess_player": 1412,
+        "produce_player_script_assemblies": 538,
+        "build_scripts_dlls": 9,
+        "writing_asset_files": 98,
+        "postprocess_built_player": 7110,
         "node_summary_table": []
       },
       "version": 1
@@ -55,7 +56,7 @@
     {
       "type": "unityLinkerData",
       "msg": {
-        "build_event_id": "df3ada7450b0c43349ac0f33fe5fa379",
+        "build_event_id": "9a4317d6536ce43c797d8c0ee358645a",
         "node_executed": false,
         "attribute_marked_count_always_link_assembly": 3,
         "attribute_swept_count_always_link_assembly": 1,
@@ -79,8 +80,8 @@
         "attribute_marked_count_dynamic_dependency": 76,
         "attribute_swept_count_dynamic_dependency": -76,
         "assembly_counts_total_in": 101,
-        "assembly_counts_link": 39,
-        "assembly_counts_copy": 7,
+        "assembly_counts_link": 37,
+        "assembly_counts_copy": 9,
         "assembly_counts_delete": 55,
         "assembly_counts_total_out": 46,
         "unresolved_stubbing_total_count": 0,
@@ -88,9 +89,9 @@
         "unresolved_stubbing_missing_abstract_class_method_count": 0,
         "unresolved_stubbing_missing_type_count": 0,
         "unresolved_stubbing_missing_method_count": 0,
-        "unrecognized_reflection_access_total_count": 386,
+        "unrecognized_reflection_access_total_count": 398,
         "unrecognized_reflection_access_core_count": 216,
-        "unrecognized_reflection_access_unity_count": 170,
+        "unrecognized_reflection_access_unity_count": 182,
         "unrecognized_reflection_access_user_count": 0,
         "recognized_reflection_access_total_count": 55,
         "recognized_reflection_access_core_count": 40,

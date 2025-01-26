@@ -1,9 +1,17 @@
 <linker>
 	<assembly fullname="Assembly-CSharp">
-		<type fullname="EnvironmentMover" preserve="nothing"/>
+		<type fullname="ARAnchorExample" preserve="nothing"/>
+		<type fullname="ARCameraConfig" preserve="nothing"/>
+		<type fullname="ARObjectPlacer" preserve="nothing"/>
+		<type fullname="CameraPermissionRequest" preserve="nothing"/>
 		<type fullname="FireController" preserve="nothing"/>
 		<type fullname="GyroControl" preserve="nothing"/>
+		<type fullname="MicrophoneManager" preserve="nothing"/>
 		<type fullname="RabbitController" preserve="nothing"/>
+		<type fullname="RabbitGameController" preserve="nothing"/>
+		<type fullname="RabbitHoleController" preserve="nothing"/>
+		<type fullname="RoadController" preserve="nothing"/>
+		<type fullname="SettlementController" preserve="nothing"/>
 		<type fullname="UICanvasController" preserve="nothing"/>
 		<type fullname="UIController" preserve="nothing"/>
 	</assembly>
@@ -22,9 +30,17 @@
 	<assembly fullname="Unity.XR.ARFoundation">
 		<type fullname="UnityEngine.XR.ARFoundation.ARCameraBackground" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.ARFoundation.ARCameraManager" preserve="nothing"/>
+		<type fullname="UnityEngine.XR.ARFoundation.ARInputManager" preserve="nothing"/>
+		<type fullname="UnityEngine.XR.ARFoundation.ARPlane" preserve="nothing"/>
+		<type fullname="UnityEngine.XR.ARFoundation.ARPlaneManager" preserve="nothing"/>
+		<type fullname="UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer" preserve="nothing"/>
+		<type fullname="UnityEngine.XR.ARFoundation.ARSession" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.XR.ARKit">
 		<type fullname="UnityEngine.XR.ARKit.ARKitLoader" preserve="nothing"/>
+	</assembly>
+	<assembly fullname="Unity.XR.CoreUtils">
+		<type fullname="Unity.XR.CoreUtils.XROrigin" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.XR.Management">
 		<type fullname="UnityEngine.XR.Management.XRGeneralSettings" preserve="nothing"/>
@@ -58,6 +74,7 @@
 		<type fullname="UnityEngine.LightmapSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.Material" preserve="nothing"/>
 		<type fullname="UnityEngine.Mesh" preserve="nothing"/>
+		<type fullname="UnityEngine.MeshCollider" preserve="nothing"/>
 		<type fullname="UnityEngine.MeshFilter" preserve="nothing"/>
 		<type fullname="UnityEngine.MeshRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.MonoBehaviour" preserve="nothing"/>
@@ -74,6 +91,9 @@
 		<type fullname="UnityEngine.Texture" preserve="nothing"/>
 		<type fullname="UnityEngine.Texture2D" preserve="nothing"/>
 		<type fullname="UnityEngine.Transform" preserve="nothing"/>
+	</assembly>
+	<assembly fullname="UnityEngine.SpatialTracking">
+		<type fullname="UnityEngine.SpatialTracking.TrackedPoseDriver" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="UnityEngine.UI">
 		<type fullname="UnityEngine.EventSystems.EventSystem" preserve="nothing"/>

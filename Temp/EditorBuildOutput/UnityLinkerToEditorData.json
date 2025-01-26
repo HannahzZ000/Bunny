@@ -36,7 +36,6 @@
           {
             "name": "AudioBehaviour",
             "scenes": [
-              "Assets/Scenes/ARScene.unity",
               "Assets/Scenes/MainMenuScene.unity",
               "Assets/Scenes/Museum.unity",
               "Assets/Scenes/Settlement.unity"
@@ -53,7 +52,6 @@
           {
             "name": "AudioListener",
             "scenes": [
-              "Assets/Scenes/ARScene.unity",
               "Assets/Scenes/MainMenuScene.unity",
               "Assets/Scenes/Museum.unity",
               "Assets/Scenes/Settlement.unity"
@@ -726,7 +724,8 @@
           {
             "name": "BoxCollider",
             "scenes": [
-              "Assets/Scenes/ARScene.unity"
+              "Assets/Scenes/ARScene.unity",
+              "Assets/Scenes/MainMenuScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -739,7 +738,9 @@
           },
           {
             "name": "MeshCollider",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/ARScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },

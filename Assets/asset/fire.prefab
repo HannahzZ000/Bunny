@@ -59,29 +59,5 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d1e43d7d79e92e041ae65ab299c406c9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1569643472569676049}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1e43d7d79e92e041ae65ab299c406c9, type: 3}
---- !u!1 &4885742596617319787 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d1e43d7d79e92e041ae65ab299c406c9, type: 3}
-  m_PrefabInstance: {fileID: 5696152825048041530}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1569643472569676049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4885742596617319787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 054dd4f0aae20a04595ff2c3e6c030c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rabbit: {fileID: 5050855156579536296, guid: 0e4d13582d5731a49bd87f2cab6b4ad8, type: 3}
-  microphoneInput: {fileID: 0}
-  maxDistance: 5
-  minVolume: 0.1
