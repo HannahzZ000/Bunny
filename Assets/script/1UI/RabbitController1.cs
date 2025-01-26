@@ -30,16 +30,7 @@ public class RabbitController : MonoBehaviour
             if (transform.position.y < offScreenY)
             {
                 isFalling = false; // 停止下落
-
-                if (uiCanvasController != null)
-                {
-                    uiCanvasController.SwitchToUI2(); // 调用 UI 切换方法
-                }
-                else
-                {
-                    Debug.LogError("UI Canvas Controller is not assigned!");
-                }
-
+                uiCanvasController.ShowUI2AndHideUI1(); // 显示 UI2 并隐藏 UI1
                 gameObject.SetActive(false); // 隐藏兔子
             }
         }

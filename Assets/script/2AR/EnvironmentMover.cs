@@ -2,34 +2,30 @@
 
 public class EnvironmentMover : MonoBehaviour
 {
-    public Transform rabbit; // 兔子的 Transform
-    public float moveSpeed = 1.0f; // 环境移动的速度
+    public float moveSpeed = 5f; // 环境移动速度
+    private Vector3 moveDirection = Vector3.back; // 默认向-Z方向移动
 
-    void Update()
+    private void Update()
     {
-        if (rabbit == null)
+        // 持续移动环境
+        transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
+
+        // 检测按键调整方向
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            Debug.LogError("Rabbit Transform 未设置，请在 Inspector 中设置！");
-            return;
+            RotateEnvironment(Vector3.left);
         }
-
-        // 获取兔子绕 Y 轴的旋转角度
-        float rabbitRotationY = rabbit.rotation.eulerAngles.y;
-
-        // 将角度限制在 -180 到 180 度之间（防止跳变）
-        if (rabbitRotationY > 180)
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            rabbitRotationY -= 360;
+            RotateEnvironment(Vector3.right);
         }
+    }
 
-        // 默认方向为 -Z（即 Vector3.back）
-        Vector3 baseDirection = Vector3.back;
-
-        // 根据兔子的 Y 轴旋转，调整移动方向
-        Quaternion rotationAdjustment = Quaternion.Euler(0, rabbitRotationY, 0);
-        Vector3 adjustedDirection = rotationAdjustment * baseDirection;
-
-        // 环境沿着调整后的方向移动
-        transform.position += adjustedDirection.normalized * moveSpeed * Time.deltaTime;
+    private void RotateEnvironment(Vector3 inputDirection)
+    {
+        float angle = inputDirection == Vector3.left ? -10f : 10f; // 每次调整10度
+        Quaternion rotation = Quaternion.Euler(0, angle, 0);
+        moveDirection = rotation * moveDirection; // 更新移动方向
+        Debug.Log("Updated move direction: " + moveDirection);
     }
 }
