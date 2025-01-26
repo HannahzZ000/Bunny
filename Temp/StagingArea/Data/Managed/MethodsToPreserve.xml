@@ -1,0 +1,16 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="UICanvasController">
+			<method name="SwitchToARScene"/>
+		</type>
+		<type fullname="UIController">
+			<method name="OpenDonationPage"/>
+			<method name="ShowARScene"/>
+			<method name="ShowARScene"/>
+			<method name="ShowHomeUI"/>
+			<method name="ShowHomeUI"/>
+			<method name="ShowMuseumScene"/>
+			<method name="ShowMuseumScene"/>
+		</type>
+	</assembly>
+</linker>
