@@ -4,50 +4,62 @@ public class GyroControl : MonoBehaviour
 {
     private bool gyroEnabled;
     private Gyroscope gyro;
-    private Quaternion initialRotation; // 初始旋转校准值
-    private Quaternion unityRotationFix = new Quaternion(0, 0, -1, 0); // 修正方向调整
+    private Quaternion initialGyroRotation; // Stores the initial gyro rotation
+    private Quaternion unityRotationFix = new Quaternion(0, 0, 1, 0); // Adjusts for coordinate system differences
+    private Quaternion initialRabbitRotation; // Stores the rabbit's initial rotation in the scene
 
-    [Range(0.1f, 10f)] public float smoothSpeed = 5f; // 平滑旋转速度
-    [Range(0.1f, 5f)] public float rotationMultiplier = 1f; // 旋转比例因子
+    [Range(0.1f, 10f)] public float smoothSpeed = 5f; // Speed of smooth rotation
+    [Range(0.1f, 5f)] public float rotationMultiplier = 1f; // Controls the sensitivity of rotation
+
+    private float currentYRotation; // Tracks the current Y-axis rotation of the rabbit
 
     void Start()
     {
-        // 启用陀螺仪
+        // Enable the gyroscope
         gyroEnabled = EnableGyro();
 
         if (gyroEnabled)
         {
-            // 保存初始旋转值
-            initialRotation = gyro.attitude * unityRotationFix;
+            // Save the initial gyro rotation
+            initialGyroRotation = gyro.attitude * unityRotationFix;
             Debug.Log("Gyro enabled and initial rotation calibrated.");
         }
+
+        // Save the rabbit's initial rotation
+        initialRabbitRotation = transform.rotation;
+        currentYRotation = 0f; // Reset the incremental rotation
     }
 
     void Update()
     {
         if (gyroEnabled)
         {
-            // 获取当前陀螺仪姿态并校正方向
-            Quaternion currentRotation = gyro.attitude * unityRotationFix;
+            // Get the current gyroscope rotation
+            Quaternion currentGyroRotation = gyro.attitude * unityRotationFix;
 
-            // 计算相对于初始方向的旋转
-            Quaternion deltaRotation = Quaternion.Inverse(initialRotation) * currentRotation;
+            // Calculate the relative rotation from the initial gyro rotation
+            Quaternion deltaRotation = Quaternion.Inverse(initialGyroRotation) * currentGyroRotation;
 
-            // 提取 Y 轴的欧拉角（避免其他方向旋转干扰）
-            Vector3 euler = deltaRotation.eulerAngles;
+            // Extract the Y-axis rotation
+            float targetYRotation = deltaRotation.eulerAngles.y;
 
-            // 调整旋转幅度比例并反转方向
-            euler.y *= -rotationMultiplier;
+            // Map the Y-axis rotation to the -180 to 180 range
+            if (targetYRotation > 180) targetYRotation -= 360;
 
-            // 平滑旋转到目标角度，仅影响 Y 轴
-            Quaternion targetRotation = Quaternion.Euler(0, euler.y, 0);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, Time.deltaTime * smoothSpeed);
+            // Scale the rotation using the multiplier
+            targetYRotation *= rotationMultiplier;
+
+            // Smoothly interpolate towards the target rotation
+            currentYRotation = Mathf.LerpAngle(currentYRotation, targetYRotation, Time.deltaTime * smoothSpeed);
+
+            // Apply the incremental rotation to the rabbit's initial rotation
+            transform.rotation = Quaternion.Euler(0, currentYRotation, 0) * initialRabbitRotation;
         }
     }
 
     private bool EnableGyro()
     {
-        // 检测设备是否支持陀螺仪
+        // Check if the device supports gyroscope
         if (SystemInfo.supportsGyroscope)
         {
             gyro = Input.gyro;

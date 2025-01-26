@@ -7544,10 +7544,12 @@ struct GyroControl_t1391215FC1352EAB35CF2B9DC297CBB2677434CC  : public MonoBehav
 {
 	bool ___gyroEnabled;
 	Gyroscope_tA4CEC0F47FFB4CEB90410CC6B860D052BB35BE9E* ___gyro;
-	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___initialRotation;
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___initialGyroRotation;
 	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___unityRotationFix;
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___initialRabbitRotation;
 	float ___smoothSpeed;
 	float ___rotationMultiplier;
+	float ___currentYRotation;
 };
 struct HandheldARInputDevice_tDC70607D65788F0D6A7BA2EABA6D289D15DFDCE9  : public InputDevice_t8BCF67533E872A75779C24C93D1D7085B72D364B
 {

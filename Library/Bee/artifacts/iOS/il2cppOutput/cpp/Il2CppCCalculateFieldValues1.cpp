@@ -14893,10 +14893,12 @@ struct GyroControl_t1391215FC1352EAB35CF2B9DC297CBB2677434CC  : public MonoBehav
 {
 	bool ___gyroEnabled;
 	Gyroscope_tA4CEC0F47FFB4CEB90410CC6B860D052BB35BE9E* ___gyro;
-	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___initialRotation;
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___initialGyroRotation;
 	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___unityRotationFix;
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___initialRabbitRotation;
 	float ___smoothSpeed;
 	float ___rotationMultiplier;
+	float ___currentYRotation;
 };
 struct HandheldARInputDevice_tDC70607D65788F0D6A7BA2EABA6D289D15DFDCE9  : public InputDevice_t8BCF67533E872A75779C24C93D1D7085B72D364B
 {
@@ -24188,9 +24190,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5995[1] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5996[5] = 
 {
 	static_cast<int32_t>(offsetof(MicrophoneManager_tE957D14922E22046A6555A28281C1AA3550AAB76_StaticFields, ___Instance)),static_cast<int32_t>(offsetof(MicrophoneManager_tE957D14922E22046A6555A28281C1AA3550AAB76, ___microphoneDevice)),static_cast<int32_t>(offsetof(MicrophoneManager_tE957D14922E22046A6555A28281C1AA3550AAB76, ___micClip)),static_cast<int32_t>(offsetof(MicrophoneManager_tE957D14922E22046A6555A28281C1AA3550AAB76, ___micInitialized)),static_cast<int32_t>(offsetof(MicrophoneManager_tE957D14922E22046A6555A28281C1AA3550AAB76, ___U3CCurrentVolumeU3Ek__BackingField)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5997[6] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5997[8] = 
 {
-	static_cast<int32_t>(offsetof(GyroControl_t1391215FC1352EAB35CF2B9DC297CBB2677434CC, ___gyroEnabled)),static_cast<int32_t>(offsetof(GyroControl_t1391215FC1352EAB35CF2B9DC297CBB2677434CC, ___gyro)),static_cast<int32_t>(offsetof(GyroControl_t1391215FC1352EAB35CF2B9DC297CBB2677434CC, ___initialRotation)),static_cast<int32_t>(offsetof(GyroControl_t1391215FC1352EAB35CF2B9DC297CBB2677434CC, ___unityRotationFix)),static_cast<int32_t>(offsetof(GyroControl_t1391215FC1352EAB35CF2B9DC297CBB2677434CC, ___smoothSpeed)),static_cast<int32_t>(offsetof(GyroControl_t1391215FC1352EAB35CF2B9DC297CBB2677434CC, ___rotationMultiplier)),};
+	static_cast<int32_t>(offsetof(GyroControl_t1391215FC1352EAB35CF2B9DC297CBB2677434CC, ___gyroEnabled)),static_cast<int32_t>(offsetof(GyroControl_t1391215FC1352EAB35CF2B9DC297CBB2677434CC, ___gyro)),static_cast<int32_t>(offsetof(GyroControl_t1391215FC1352EAB35CF2B9DC297CBB2677434CC, ___initialGyroRotation)),static_cast<int32_t>(offsetof(GyroControl_t1391215FC1352EAB35CF2B9DC297CBB2677434CC, ___unityRotationFix)),static_cast<int32_t>(offsetof(GyroControl_t1391215FC1352EAB35CF2B9DC297CBB2677434CC, ___initialRabbitRotation)),static_cast<int32_t>(offsetof(GyroControl_t1391215FC1352EAB35CF2B9DC297CBB2677434CC, ___smoothSpeed)),static_cast<int32_t>(offsetof(GyroControl_t1391215FC1352EAB35CF2B9DC297CBB2677434CC, ___rotationMultiplier)),static_cast<int32_t>(offsetof(GyroControl_t1391215FC1352EAB35CF2B9DC297CBB2677434CC, ___currentYRotation)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5998[9] = 
 {
 	static_cast<int32_t>(offsetof(RabbitGameController_t2F3E414EE207CEAB4410FEDDED02C5C1CAA6C7C6, ___rabbit)),static_cast<int32_t>(offsetof(RabbitGameController_t2F3E414EE207CEAB4410FEDDED02C5C1CAA6C7C6, ___environment)),static_cast<int32_t>(offsetof(RabbitGameController_t2F3E414EE207CEAB4410FEDDED02C5C1CAA6C7C6, ___environmentMoveSpeed)),static_cast<int32_t>(offsetof(RabbitGameController_t2F3E414EE207CEAB4410FEDDED02C5C1CAA6C7C6, ___smoothSpeed)),static_cast<int32_t>(offsetof(RabbitGameController_t2F3E414EE207CEAB4410FEDDED02C5C1CAA6C7C6, ___moveDirection)),static_cast<int32_t>(offsetof(RabbitGameController_t2F3E414EE207CEAB4410FEDDED02C5C1CAA6C7C6, ___gyro)),static_cast<int32_t>(offsetof(RabbitGameController_t2F3E414EE207CEAB4410FEDDED02C5C1CAA6C7C6, ___gyroEnabled)),static_cast<int32_t>(offsetof(RabbitGameController_t2F3E414EE207CEAB4410FEDDED02C5C1CAA6C7C6, ___initialRotation)),static_cast<int32_t>(offsetof(RabbitGameController_t2F3E414EE207CEAB4410FEDDED02C5C1CAA6C7C6, ___unityRotationFix)),};
